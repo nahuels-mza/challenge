@@ -14,9 +14,9 @@ ingress:
   enabled: true
   className: rf-nginx
   annotations:
-    kubernetes.io/ingress.class: nginx
+    kubernetes.io/ingress.class: rf-nginx
   hosts:
-    - host: svitla.local
+    - host: local
       paths:
         - path: /
           pathType: Prefix
