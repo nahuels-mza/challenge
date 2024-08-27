@@ -1,4 +1,6 @@
-FROM node:14-alpine AS build
+ARG IMAGE_NAME
+ARG IMAGE_TAG
+FROM ${IMAGE_NAME}:${IMAGE_TAG} AS build
 WORKDIR /app
 COPY package*.json ./
 RUN npm install --production
